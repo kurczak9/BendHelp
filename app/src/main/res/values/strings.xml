@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">BendHelp</string>
+    <string name="bend_radius">Bend Radius</string>
+    <string name="tube_diameter">Tube Diameter</string>
+    <string name="tube_thickness">Tube Thickness</string>
+    <string name="material">Material</string>
+    <string name="button_next">NEXT</string>
+    <string name="button_back">BACK</string>
 
 
 </resources>

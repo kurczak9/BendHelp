@@ -4,12 +4,94 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/loloo"
+        android:id="@+id/bendRadius"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="195dp"
-        android:text="TextView" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:text="@string/bend_radius"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/bendRadiusInput"
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:ems="10"
+        android:inputType="textPersonName|number|numberDecimal" />
+
+    <TextView
+        android:id="@+id/tubeDiameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="117dp"
+        android:text="@string/tube_diameter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/tubeDiameterInput"
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="157dp"
+        android:ems="10"
+        android:inputType="textPersonName|number|numberDecimal" />
+
+    <TextView
+        android:id="@+id/tubeThickness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="219dp"
+        android:text="@string/tube_thickness"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/tubeThicknessInput"
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="206dp"
+        android:ems="10"
+        android:inputType="textPersonName|number|numberDecimal" />
+
+    <TextView
+        android:id="@+id/material"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="156dp"
+        android:text="@string/material"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="191dp"
+        android:layout_height="82dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="openMenu"
+        android:text="@string/button_back" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="191dp"
+        android:layout_height="82dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/button_next" />
+
 </RelativeLayout>

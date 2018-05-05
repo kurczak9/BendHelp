@@ -18,7 +18,13 @@ public class MainActivity extends AppCompatActivity {
         Intent openCBL = new Intent(this, CreateBendLabelActivity.class);
 
         startActivity(openCBL);
+    }
 
+    public void openMenu(View view){
+
+        Intent openM = new Intent(this, MainActivity.class);
+
+        startActivity(openM);
     }
 
 
