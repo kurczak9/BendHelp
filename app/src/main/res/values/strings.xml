@@ -6,6 +6,11 @@
     <string name="material">Material</string>
     <string name="button_next">NEXT</string>
     <string name="button_back">BACK</string>
-
+    <string name="button_CBL">CREATE BEND LABEL</string>
+    <string name="button_settings">SETTINGS</string>
+    <string name="button_archive_setup">BEND SETUPS</string>
+    <string name="button_archive_label">BEND LABELS</string>
+    <string name="mm">MM</string>
+    <string name="degrees">DEGREES</string>
 
 </resources>

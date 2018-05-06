@@ -1,18 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
+
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="openCreateBendLabel"
-        android:text="Button"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="195dp" />
+        android:id="@+id/buttonSettings"
+        android:layout_width="164dp"
+        android:layout_height="164dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/button_settings" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/buttonBendSetup"
+        android:layout_width="164dp"
+        android:layout_height="164dp"
+        android:layout_alignStart="@+id/buttonCreateBendLabel"
+        android:layout_alignTop="@+id/buttonBendLabel"
+        android:text="@string/button_archive_setup" />
+
+    <Button
+        android:id="@+id/buttonBendLabel"
+        android:layout_width="164dp"
+        android:layout_height="164dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/buttonSettings"
+        android:layout_marginBottom="90dp"
+        android:text="@string/button_archive_label" />
+
+    <Button
+        android:id="@+id/buttonCreateBendLabel"
+        android:layout_width="164dp"
+        android:layout_height="164dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/buttonSettings"
+        android:layout_marginStart="21dp"
+        android:onClick="openCreateBendLabel"
+        android:text="@string/button_CBL" />
+</RelativeLayout>
