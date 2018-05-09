@@ -1,46 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/ConstraintLayout">
 
 
     <Button
         android:id="@+id/buttonSettings"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="75dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
         android:onClick="openSettings"
-        android:text="@string/button_settings" />
+        android:text="@string/button_settings"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBendLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonCreateBendLabel"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonBendSetup"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_alignStart="@+id/buttonCreateBendLabel"
-        android:layout_alignTop="@+id/buttonBendLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:onClick="openArchiveBendSetup"
-        android:text="@string/button_archive_setup" />
+        android:text="@string/button_archive_setup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonBendLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCreateBendLabel" />
 
     <Button
         android:id="@+id/buttonBendLabel"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/buttonSettings"
-        android:layout_marginBottom="90dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:onClick="openArchiveBendLabel"
-        android:text="@string/button_archive_label" />
+        android:text="@string/button_archive_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonBendSetup"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSettings" />
 
     <Button
         android:id="@+id/buttonCreateBendLabel"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/buttonSettings"
-        android:layout_marginStart="21dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
         android:onClick="openCreateBendLabel"
-        android:text="@string/button_CBL" />
-</RelativeLayout>
+        android:text="@string/button_CBL"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBendSetup"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSettings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

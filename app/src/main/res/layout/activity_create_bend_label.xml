@@ -1,102 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
         android:id="@+id/bendRadius"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/bend_radius"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textStyle="bold" />
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        app:autoSizeMaxTextSize="30dp"
+        app:autoSizeMinTextSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bendRadiusInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/bendRadiusInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/mm"
+        android:inputType="textPersonName|number|numberDecimal"
+        android:maxHeight="45dp"
+        android:maxLength="125"
+        android:maxWidth="60dp"
+        android:minHeight="16dp"
+        android:singleLine="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        app:layout_constraintBottom_toTopOf="@+id/tubeDiameter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bendRadius"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/tubeDiameter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="139dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/tube_diameter"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textStyle="bold" />
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        app:autoSizeMaxTextSize="30dp"
+        app:autoSizeMinTextSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/tubeDiameterInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bendRadiusInput" />
+
+    <EditText
+        android:id="@+id/tubeDiameterInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/mm"
+        android:inputType="textPersonName|number|numberDecimal"
+        android:maxHeight="45dp"
+        android:maxWidth="125dp"
+        android:minHeight="16dp"
+        android:minWidth="60dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        app:layout_constraintBottom_toTopOf="@+id/tubeThickness"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tubeDiameter" />
 
     <TextView
         android:id="@+id/tubeThickness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="256dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/tube_thickness"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textStyle="bold" />
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        app:autoSizeMaxTextSize="30dp"
+        app:autoSizeMinTextSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/tubeThicknessInput2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tubeDiameterInput" />
+
+    <EditText
+        android:id="@+id/tubeThicknessInput2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/mm"
+        android:inputType="textPersonName|number|numberDecimal"
+        android:maxHeight="45dp"
+        android:maxLength="40"
+        android:maxWidth="125dp"
+        android:minHeight="16dp"
+        android:minWidth="60dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        app:layout_constraintBottom_toTopOf="@+id/material"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tubeThickness"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/material"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="199dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="@string/material"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/bendRadiusInput"
-        android:layout_width="121dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:ems="10"
-        android:hint="@string/mm"
-        android:inputType="textPersonName|number|numberDecimal"
-        android:singleLine="false" />
-
-    <EditText
-        android:id="@+id/tubeDiameterInput"
-        android:layout_width="121dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="180dp"
-        android:ems="10"
-        android:hint="@string/mm"
-        android:inputType="textPersonName|number|numberDecimal" />
-
-    <EditText
-        android:id="@+id/tubeThicknessInput"
-        android:layout_width="121dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="263dp"
-        android:ems="10"
-        android:hint="@string/mm"
-        android:inputType="textPersonName|number|numberDecimal" />
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        app:autoSizeMaxTextSize="30dp"
+        app:autoSizeMinTextSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tubeThicknessInput2" />
 
     <Button
         android:id="@+id/buttonBack"
-        android:layout_width="206dp"
-        android:layout_height="82dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:maxHeight="85dp"
         android:onClick="openMenu"
-        android:text="@string/button_back" />
+        android:text="@string/button_back"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <Button
         android:id="@+id/buttonNext"
-        android:layout_width="206dp"
-        android:layout_height="82dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:maxHeight="85dp"
         android:onClick="saveBendSetup"
-        android:text="@string/button_next" />
+        android:text="@string/button_next"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonBack"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/material" />
+
+</android.support.constraint.ConstraintLayout>
