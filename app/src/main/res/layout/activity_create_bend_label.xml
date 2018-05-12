@@ -134,15 +134,27 @@
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         app:autoSizeMaxTextSize="30dp"
         app:autoSizeMinTextSize="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/input_material"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tubeThicknessInput2" />
+
+    <Spinner
+        android:id="@+id/input_material"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBack"
+        app:layout_constraintEnd_toEndOf="@+id/tubeThicknessInput2"
+        app:layout_constraintStart_toStartOf="@+id/tubeThicknessInput2"
+        app:layout_constraintTop_toBottomOf="@+id/material" />
 
     <Button
         android:id="@+id/buttonBack"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         android:maxHeight="85dp"
         android:onClick="openMenu"
         android:text="@string/button_back"
@@ -150,7 +162,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonNext"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/input_material" />
 
     <Button
         android:id="@+id/buttonNext"
@@ -163,20 +175,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonBack"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:ems="10"
-        android:inputType="number|numberDecimal"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/buttonBack"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/material" />
+        app:layout_constraintTop_toTopOf="@+id/buttonBack" />
 
 </android.support.constraint.ConstraintLayout>
