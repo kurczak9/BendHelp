@@ -1,6 +1,5 @@
 package pl.lo3.bendhelp;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,11 +15,11 @@ public class MenuActivity extends AppCompatActivity {
 
 
 
-    public void openCreateBendLabel(View view){
+    public void openBendData(View view){
 
-        Intent openCBL = new Intent(this, CreateBendLabelActivity.class);
+        Intent openBD = new Intent(this, BendDataActivity.class);
 
-        startActivity(openCBL);
+        startActivity(openBD);
     }
 
     public void openArchiveBendSetup(View view){

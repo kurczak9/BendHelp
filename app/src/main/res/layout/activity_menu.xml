@@ -74,7 +74,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:onClick="openCreateBendLabel"
+        android:onClick="openBendData"
         android:text="@string/button_CBL"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"

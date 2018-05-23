@@ -12,6 +12,7 @@
     <string name="button_archive_label">BEND LABELS</string>
     <string name="mm">MM</string>
     <string name="degrees">DEGREES</string>
+    <string name="finish_CBL">FINISH</string>
 
     <string-array name="material_spinner">
         <item>Stainless Steel</item>
