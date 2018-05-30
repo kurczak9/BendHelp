@@ -36,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/bend_radius"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         app:autoSizeMaxTextSize="30dp"
@@ -115,15 +116,13 @@
         android:layout_marginTop="8dp"
         android:text="@string/tube_thickness"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-        app:autoSizeMaxTextSize="30dp"
-        app:autoSizeMinTextSize="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/tubeThicknessInput2"
+        app:layout_constraintBottom_toTopOf="@+id/tubeThicknessInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tubeDiameterInput" />
 
     <EditText
-        android:id="@+id/tubeThicknessInput2"
+        android:id="@+id/tubeThicknessInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -154,12 +153,10 @@
         android:layout_marginStart="8dp"
         android:text="@string/material"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-        app:autoSizeMaxTextSize="30dp"
-        app:autoSizeMinTextSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/input_material"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tubeThicknessInput2" />
+        app:layout_constraintTop_toBottomOf="@+id/tubeThicknessInput" />
 
     <Spinner
         android:id="@+id/input_material"
@@ -168,14 +165,17 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toEndOf="@+id/tubeThicknessInput2"
-        app:layout_constraintStart_toStartOf="@+id/tubeThicknessInput2" />
+        app:layout_constraintEnd_toEndOf="@+id/tubeThicknessInput"
+        app:layout_constraintStart_toStartOf="@+id/tubeThicknessInput" />
 
     <Button
         android:id="@+id/buttonBack"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:maxHeight="85dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:onClick="openMenu"
         android:text="@string/button_back"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
@@ -188,7 +188,10 @@
         android:id="@+id/buttonNext"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:maxHeight="85dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:onClick="openCreateBendLabel"
         android:text="@string/button_next"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
