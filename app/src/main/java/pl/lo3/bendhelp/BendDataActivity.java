@@ -1,17 +1,14 @@
 package pl.lo3.bendhelp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import java.util.List;
 
 import io.paperdb.Paper;
 
@@ -35,19 +32,20 @@ public class BendDataActivity extends AppCompatActivity {
         tubeThickness = (EditText) findViewById(R.id.tubeThicknessInput);
         //material = (EditText) findViewById(R.id.material);
 
-        loadArrayFromPaper();
+        //loadArrayFromPaper();
 
         //paper
-        if(cur!=null){
+        //if(cur!=null){
+        if(getIntent().getStringExtra("radius") != null){
 
             EditText bendRadius = (EditText) findViewById(R.id.bendRadiusInput);
-            bendRadius.setText((int) cur.getBendRadius());
+            bendRadius.setText(getIntent().getStringExtra("radius"));
 
             EditText tubeDiameter = (EditText) findViewById(R.id.tubeDiameterInput);
-            tubeDiameter.setText((int) cur.getTubeDiameter());
+            tubeDiameter.setText(getIntent().getStringExtra("diameter"));
 
             EditText tubeThickness = (EditText) findViewById(R.id.tubeThicknessInput);
-            tubeThickness.setText((int)cur.getTubeThickness());
+            tubeThickness.setText(getIntent().getStringExtra("thickness"));
 
         }
 
@@ -80,18 +78,18 @@ public class BendDataActivity extends AppCompatActivity {
     }
 
 
-    private void loadArrayFromPaper(){
-        // Get list of item
-        List<String> allKeys = Paper.book().getAllKeys();
-
-
-        for (int i = 0; i <allKeys.size() ; i++) {
-            //Create a State object for each Key.
-            cur = Paper.book().read(String.valueOf(i+1));
-            //Add the State object to the ArrayList (in this case we are the ArrayList).
-        }
-
-    }
+//    private void loadArrayFromPaper(){
+//        // Get list of item
+//        List<String> allKeys = Paper.book().getAllKeys();
+//
+//
+//        for (int i = 0; i <allKeys.size() ; i++) {
+//            //Create a State object for each Key.
+//            cur = Paper.book().read(String.valueOf(i+1));
+//            //Add the State object to the ArrayList (in this case we are the ArrayList).
+//        }
+//
+//    }
 
 
 

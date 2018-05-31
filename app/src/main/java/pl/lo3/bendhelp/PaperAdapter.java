@@ -64,24 +64,11 @@ public class PaperAdapter extends ArrayAdapter<State> implements Filterable {
 			mView.setTextSize(28);
 		}
 		
-		//Set the state name as the text.
-
-		//float f =  getItem(pos).getBendRadius();
-		//String s = Float.toString(25.0f);
-		mView.setText("tekst");
+		//TODO cały opis zaisanych parametrów
+		mView.setText(Float.toString(getItem(pos).getBendRadius()));
 
 
 
-		//We could handle the row clicks from here. But instead
-		//we'll use the ListView.OnItemClickListener from inside
-		//of MainActivity, which provides some benefits over doing it here.
-		
-		/*mView.setOnClickListener(new OnClickListener(){
-			public void onClick(View v){
-				Toast.makeText(parent.getContext(), getItem(pos).getCity(), Toast.LENGTH_SHORT).show();
-			}
-		});*/
-		
 		return mView;
 	}
 	
@@ -94,13 +81,17 @@ public class PaperAdapter extends ArrayAdapter<State> implements Filterable {
 		List<String> allKeys = Paper.book().getAllKeys();
 		State cur;
 
-
-		for (int i = 0; i <allKeys.size() ; i++) {
+        //TODO odczytywanie listy zpaisanych pozycji
+		/*for (int i = 0; i <allKeys.size() ; i++) {
             //Create a State object for each Key.
             cur = Paper.book().read(String.valueOf(i+1));
             //Add the State object to the ArrayList (in this case we are the ArrayList).
             this.add(cur);
-        }
+        }*/
+		cur = Paper.book().read("zapis");
+		//Add the State object to the ArrayList (in this case we are the ArrayList).
+		this.add(cur);
+
 	}
 
     public void reloadArrayFromPaper(){

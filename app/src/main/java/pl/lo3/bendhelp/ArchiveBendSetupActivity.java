@@ -1,9 +1,8 @@
 package pl.lo3.bendhelp;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -32,9 +31,9 @@ public class ArchiveBendSetupActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),BendDataActivity.class);
 
 //            intent.putExtra("id",""+mAdapter.getItem(pos).getId());
-//            intent.putExtra("land",""+mAdapter.getItem(pos).getLand().trim());
-//            intent.putExtra("city",""+mAdapter.getItem(pos).getCity().trim());
-//            intent.putExtra("stop",""+mAdapter.getItem(pos).getStopName() + "(" +mAdapter.getItem(pos).getStopNumber()+")");
+            intent.putExtra("radius",""+mAdapter.getItem(pos).getBendRadius());
+            intent.putExtra("diameter",""+mAdapter.getItem(pos).getTubeDiameter());
+            intent.putExtra("thickness",""+mAdapter.getItem(pos).getTubeThickness());
 //            intent.putExtra("line",""+mAdapter.getItem(pos).getLineNumber());
 //            intent.putExtra("from",""+mAdapter.getItem(pos).getFrom().getTime());
 //            intent.putExtra("down",""+mAdapter.getItem(pos).getDown().getTime());
