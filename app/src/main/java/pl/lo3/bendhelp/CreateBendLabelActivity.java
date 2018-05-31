@@ -12,6 +12,8 @@ public class CreateBendLabelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_bend_label);
     }
 
+
+
     public void openMenu(View view) {
 
         finish();

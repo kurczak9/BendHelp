@@ -13,6 +13,7 @@ public class State {
 	private String material;
 
 
+
 	public float getBendRadius() {
 		return bendRadius;
 	}
