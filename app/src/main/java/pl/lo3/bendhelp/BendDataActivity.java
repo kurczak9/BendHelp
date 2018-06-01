@@ -38,7 +38,6 @@ public class BendDataActivity extends AppCompatActivity {
         //if(cur!=null){
         if(getIntent().getStringExtra("radius") != null){
 
-
             EditText bendRadius = (EditText) findViewById(R.id.bendRadiusInput);
             bendRadius.setText(getIntent().getStringExtra("radius"));
 
