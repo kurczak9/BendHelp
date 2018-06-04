@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    dataBinding.enabled = true
     compileSdkVersion 27
     defaultConfig {
         applicationId "pl.lo3.bendhelp"

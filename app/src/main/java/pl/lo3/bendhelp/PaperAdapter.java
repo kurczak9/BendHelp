@@ -64,10 +64,13 @@ public class PaperAdapter extends ArrayAdapter<State> implements Filterable {
 			mView.setTextSize(28);
 		}
 		
-		//TODO cały opis zaisanych parametrów
-		mView.setText(Float.toString(getItem(pos).getBendRadius()));
+		//TODO cały opis zapisanych parametrów
+        String bendR = (Float.toString(getItem(pos).getBendRadius()));
+		String tubeD = (Float.toString(getItem(pos).getTubeDiameter()));
+		String tubeT = (Float.toString(getItem(pos).getTubeThickness()));
+		String Material = ((getItem(pos).getMaterial()));
 
-
+        mView.setText(bendR+"/"+tubeD+"x"+tubeT+"/"+Material);
 
 		return mView;
 	}
@@ -93,13 +96,5 @@ public class PaperAdapter extends ArrayAdapter<State> implements Filterable {
 		this.add(cur);
 
 	}
-
-    public void reloadArrayFromPaper(){
-        this.clear();
-        loadArrayFromPaper();
-
-    }
-
-
 
 }

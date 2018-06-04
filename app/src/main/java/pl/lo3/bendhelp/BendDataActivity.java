@@ -1,62 +1,54 @@
 package pl.lo3.bendhelp;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
+import pl.lo3.bendhelp.databinding.ActivityBendDataBinding;
 
 import io.paperdb.Paper;
 
 public class BendDataActivity extends AppCompatActivity {
 
-    public State cur;
-
-    EditText bendRadius;
-    EditText tubeDiameter;
-    EditText tubeThickness;
-    EditText material;
-
+    ActivityBendDataBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bend_data);
 
-        bendRadius = (EditText) findViewById(R.id.bendRadiusInput);
-        tubeDiameter = (EditText) findViewById(R.id.tubeDiameterInput);
-        tubeThickness = (EditText) findViewById(R.id.tubeThicknessInput);
-        //material = (EditText) findViewById(R.id.material);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_bend_data);
 
-        //loadArrayFromPaper();
-
-        //paper
-        //if(cur!=null){
-        if(getIntent().getStringExtra("radius") != null){
-
-            EditText bendRadius = (EditText) findViewById(R.id.bendRadiusInput);
-            bendRadius.setText(getIntent().getStringExtra("radius"));
-
-            EditText tubeDiameter = (EditText) findViewById(R.id.tubeDiameterInput);
-            tubeDiameter.setText(getIntent().getStringExtra("diameter"));
-
-            EditText tubeThickness = (EditText) findViewById(R.id.tubeThicknessInput);
-            tubeThickness.setText(getIntent().getStringExtra("thickness"));
-
-        }
-
-
-        //spinnner
-        Spinner input_material = (Spinner) findViewById(R.id.input_material);
 
         ArrayAdapter adaptermaterial = ArrayAdapter.createFromResource(this,
                 R.array. material_spinner, android.R.layout.simple_spinner_dropdown_item);
 
-        input_material.setAdapter(adaptermaterial);
+        binding.inputMaterial.setAdapter(adaptermaterial);
+
+
+
+        if(getIntent().getStringExtra("radius") != null){
+
+
+            binding.bendRadiusInput.setText(getIntent().getStringExtra("radius"));
+
+            binding.tubeDiameterInput.setText(getIntent().getStringExtra("diameter"));
+
+            binding.tubeThicknessInput.setText(getIntent().getStringExtra("thickness"));
+
+            String compareValue = getIntent().getStringExtra("material");
+            if (compareValue != null) {
+                binding.inputMaterial.setSelection(adaptermaterial.getPosition(compareValue));
+            }
+
+        }
+
+
+
 
     }
 
@@ -97,10 +89,10 @@ public class BendDataActivity extends AppCompatActivity {
     public void saveBendSetup(){
 
         State state = new State();
-
-        state.setBendRadius(Float.parseFloat(bendRadius.getText().toString().trim()));
-        state.setTubeDiameter(Float.parseFloat(tubeDiameter.getText().toString().trim()));
-        state.setTubeThickness(Float.parseFloat(tubeThickness.getText().toString().trim()));
+        state.setBendRadius(Float.parseFloat(binding.bendRadiusInput.getText().toString().trim()));
+        state.setTubeDiameter(Float.parseFloat(binding.tubeDiameterInput.getText().toString().trim()));
+        state.setTubeThickness(Float.parseFloat(binding.tubeThicknessInput.getText().toString().trim()));
+        state.setMaterial(binding.inputMaterial.getSelectedItem().toString().trim());
 
         Paper.book().write("zapis", state);
 
@@ -128,9 +120,9 @@ public class BendDataActivity extends AppCompatActivity {
     }
 
     private boolean validateBendRadius() {
-        if (bendRadius.getText().toString().trim().isEmpty()) {
+        if (binding.bendRadiusInput.getText().toString().trim().isEmpty()) {
            // inputLayoutLine.setError(getString(R.string.err_msg_line));
-            requestFocus(bendRadius);
+            requestFocus(binding.bendRadiusInput);
             validationToast();
             return false;
         }
@@ -141,9 +133,9 @@ public class BendDataActivity extends AppCompatActivity {
     }
 
     private boolean validateTubeDiameter() {
-        if (tubeDiameter.getText().toString().trim().isEmpty()) {
+        if (binding.tubeDiameterInput.getText().toString().trim().isEmpty()) {
             // inputLayoutLine.setError(getString(R.string.err_msg_line));
-            requestFocus(tubeDiameter);
+            requestFocus(binding.tubeDiameterInput);
             validationToast();
             return false;
         }
@@ -154,9 +146,9 @@ public class BendDataActivity extends AppCompatActivity {
     }
 
     private boolean validateTubeThinckness() {
-        if (tubeThickness.getText().toString().trim().isEmpty()) {
+        if (binding.tubeThicknessInput.getText().toString().trim().isEmpty()) {
             // inputLayoutLine.setError(getString(R.string.err_msg_line));
-            requestFocus(tubeThickness);
+            requestFocus(binding.tubeThicknessInput);
             validationToast();
             return false;
         }

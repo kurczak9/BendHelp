@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+<android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CreateBendLabelActivity">
@@ -18,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.40" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline8"
@@ -50,6 +51,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
+        android:onClick="openFinish"
         android:text="@string/button_next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,24 +59,23 @@
         app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/x1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="1"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/x2"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
-        app:layout_constraintVertical_chainStyle="spread_inside" />
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/x2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -83,14 +84,13 @@
         android:ems="10"
         android:hint="2"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        app:layout_constraintBottom_toTopOf="@+id/x3"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/x1" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/x3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -99,115 +99,105 @@
         android:ems="10"
         android:hint="3"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        app:layout_constraintBottom_toTopOf="@+id/x4"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/x2" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/x4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="4dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="4"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText5"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
-
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="5"
-        android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/x3" />
 
     <EditText
-        android:id="@+id/editText11"
+        android:id="@+id/a1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
+        android:hint="4"
         android:inputType="number|numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/editText13"
+        app:layout_constraintBottom_toTopOf="@+id/a2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/a4"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/a2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="4"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/a3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+        app:layout_constraintTop_toBottomOf="@+id/a1" />
 
     <EditText
-        android:id="@+id/editText13"
+        android:id="@+id/a3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="number|numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/editText14"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toBottomOf="@+id/editText11" />
-
-    <EditText
-        android:id="@+id/editText14"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="number|numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/editText15"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toBottomOf="@+id/editText13" />
-
-    <EditText
-        android:id="@+id/editText15"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="number|numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/editText16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toBottomOf="@+id/editText14" />
-
-    <EditText
-        android:id="@+id/editText16"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
+        android:hint="4"
         android:inputType="number|numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toBottomOf="@+id/editText15" />
+        app:layout_constraintTop_toBottomOf="@+id/a2" />
+
+    <EditText
+        android:id="@+id/a4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="4"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/a1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bend" />
+
 </android.support.constraint.ConstraintLayout>
+    </layout>

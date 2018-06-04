@@ -22,7 +22,7 @@ public class ArchiveBendSetupActivity extends AppCompatActivity {
         mAdapter = new PaperAdapter(this, -1);
         mList = findViewById(R.id.mList);
 
-        //attach our Adapter to the ListView. This will populate all of the rows.
+
         mList.setAdapter(mAdapter);
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -30,13 +30,10 @@ public class ArchiveBendSetupActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(),BendDataActivity.class);
 
-//            intent.putExtra("id",""+mAdapter.getItem(pos).getId());
             intent.putExtra("radius",""+mAdapter.getItem(pos).getBendRadius());
             intent.putExtra("diameter",""+mAdapter.getItem(pos).getTubeDiameter());
             intent.putExtra("thickness",""+mAdapter.getItem(pos).getTubeThickness());
-//            intent.putExtra("line",""+mAdapter.getItem(pos).getLineNumber());
-//            intent.putExtra("from",""+mAdapter.getItem(pos).getFrom().getTime());
-//            intent.putExtra("down",""+mAdapter.getItem(pos).getDown().getTime());
+            intent.putExtra("material",""+mAdapter.getItem(pos).getMaterial());
 
                 startActivity(intent);
             }
