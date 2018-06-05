@@ -17,7 +17,7 @@ public class ArchiveBendLabelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_archive_bend_label);
 
-        mAdapter = new PaperAdapter(this, -1,"zapis2");
+        mAdapter = new PaperAdapter(this, -1, "zapis2");
         mList = findViewById(R.id.mListlebel);
 
 
