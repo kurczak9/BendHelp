@@ -75,27 +75,28 @@ public class PaperAdapter extends ArrayAdapter<State> implements Filterable {
             mView.setTextSize(28);
         }
 
+        if (getItem(pos)!=null) {
+            if (nameOfPaper == "zapis") {
+                //TODO cały opis zapisanych parametrów
+                String bendR = (Float.toString(getItem(pos).getBendRadius()));
+                String tubeD = (Float.toString(getItem(pos).getTubeDiameter()));
+                String tubeT = (Float.toString(getItem(pos).getTubeThickness()));
+                String Material = ((getItem(pos).getMaterial()));
 
-        if (nameOfPaper == "zapis") {
-            //TODO cały opis zapisanych parametrów
-            String bendR = (Float.toString(getItem(pos).getBendRadius()));
-            String tubeD = (Float.toString(getItem(pos).getTubeDiameter()));
-            String tubeT = (Float.toString(getItem(pos).getTubeThickness()));
-            String Material = ((getItem(pos).getMaterial()));
+                mView.setText(bendR + "/" + tubeD + "x" + tubeT + "/" + Material);
+            } else {
+                //znaczy jest w zapis2
 
-            mView.setText(bendR + "/" + tubeD + "x" + tubeT + "/" + Material);
-        } else {
-            //TODO cały opis zapisanych parametrów
-
-            String x1 = (Float.toString(getItem(pos).getX1()));
-            String x2 = (Float.toString(getItem(pos).getX2()));
-            String x3 = (Float.toString(getItem(pos).getX3()));
-            String x4 = (Float.toString(getItem(pos).getX4()));
-            String a1 = (Float.toString(getItem(pos).getA1()));
-            String a2 = (Float.toString(getItem(pos).getA2()));
-            String a3 = (Float.toString(getItem(pos).getA3()));
-            String a4 = (Float.toString(getItem(pos).getA4()));
-            mView.setText("x1="+x1 + " a1=" + a1);
+                String x1 = (Float.toString(getItem(pos).getX1()));
+                String x2 = (Float.toString(getItem(pos).getX2()));
+                String x3 = (Float.toString(getItem(pos).getX3()));
+                String x4 = (Float.toString(getItem(pos).getX4()));
+                String a1 = (Float.toString(getItem(pos).getA1()));
+                String a2 = (Float.toString(getItem(pos).getA2()));
+                String a3 = (Float.toString(getItem(pos).getA3()));
+                String a4 = (Float.toString(getItem(pos).getA4()));
+                mView.setText("x1=" + x1 + " a1=" + a1);
+            }
         }
         return mView;
     }
