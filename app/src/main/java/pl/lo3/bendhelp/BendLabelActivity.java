@@ -8,21 +8,21 @@ import android.view.View;
 import android.view.WindowManager;
 
 import io.paperdb.Paper;
-import pl.lo3.bendhelp.databinding.ActivityCreateBendLabelBinding;
+import pl.lo3.bendhelp.databinding.ActivityBendLabelBinding;
 
-public class CreateBendLabelActivity extends AppCompatActivity {
+public class BendLabelActivity extends AppCompatActivity {
 
-    ActivityCreateBendLabelBinding binding;
+    ActivityBendLabelBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_bend_label);
+        setContentView(R.layout.activity_bend_label);
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_create_bend_label);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_bend_label);
 
 
-        if(getIntent().getStringExtra("x1") != null){
+        if (getIntent().getStringExtra("x1") != null) {
 
 
             binding.x1.setText(getIntent().getStringExtra("x1"));
@@ -46,13 +46,12 @@ public class CreateBendLabelActivity extends AppCompatActivity {
     }
 
 
-
     public void openMenu(View view) {
 
         finish();
     }
 
-    public void saveCBL(){
+    public void saveCBL() {
 
         State state = new State();
         state.setX1(Float.parseFloat(binding.x1.getText().toString().trim()));
@@ -72,9 +71,9 @@ public class CreateBendLabelActivity extends AppCompatActivity {
      */
     private boolean submitForm() {
 
-      //  if (!validatex1()) {
-     //       return false;
-     //   }
+        //  if (!validatex1()) {
+        //       return false;
+        //   }
 
 
         return true;
@@ -95,20 +94,19 @@ public class CreateBendLabelActivity extends AppCompatActivity {
 //    }
 
 
-
     private void requestFocus(View view) {
         if (view.requestFocus()) {
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
         }
     }
 
-    public void openFinish(View view){
+    public void openFinish(View view) {
 
-        if(submitForm()){
+        if (submitForm()) {
 
             saveCBL();
-
-            Intent openCBL = new Intent(this, CreateBendLabelActivity.class);
+            finish();
+            Intent openCBL = new Intent(this, FinishActivity.class);
 
             startActivity(openCBL);
         }

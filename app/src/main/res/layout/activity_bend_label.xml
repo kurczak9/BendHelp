@@ -5,7 +5,7 @@
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateBendLabelActivity">
+    tools:context=".BendLabelActivity">
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline6"
@@ -52,7 +52,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:onClick="openFinish"
-        android:text="@string/button_next"
+        android:text="@string/button_calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline6"

@@ -8,13 +8,14 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
-import pl.lo3.bendhelp.databinding.ActivityBendDataBinding;
 
 import io.paperdb.Paper;
+import pl.lo3.bendhelp.databinding.ActivityBendDataBinding;
 
 public class BendDataActivity extends AppCompatActivity {
 
     ActivityBendDataBinding binding;
+    private ArrayAdapter adaptermaterial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +25,13 @@ public class BendDataActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_bend_data);
 
 
-        ArrayAdapter adaptermaterial = ArrayAdapter.createFromResource(this,
-                R.array. material_spinner, android.R.layout.simple_spinner_dropdown_item);
+        adaptermaterial = ArrayAdapter.createFromResource(this,
+                R.array.material_spinner, android.R.layout.simple_spinner_dropdown_item);
 
         binding.inputMaterial.setAdapter(adaptermaterial);
 
 
-
-        if(getIntent().getStringExtra("radius") != null){
+        if (getIntent().getStringExtra("radius") != null) {
 
 
             binding.bendRadiusInput.setText(getIntent().getStringExtra("radius"));
@@ -48,8 +48,6 @@ public class BendDataActivity extends AppCompatActivity {
         }
 
 
-
-
     }
 
     public void openMenu(View view) {
@@ -57,36 +55,18 @@ public class BendDataActivity extends AppCompatActivity {
         finish();
     }
 
-    public void openCreateBendLabel(View view){
+    public void openCreateBendLabel(View view) {
 
-        if(submitForm()){
+        if (submitForm()) {
 
-        saveBendSetup();
-
-        Intent openCBL = new Intent(this, CreateBendLabelActivity.class);
-
-        startActivity(openCBL);
+            saveBendSetup();
+            Intent openCBL = new Intent(this, BendLabelActivity.class);
+            startActivity(openCBL);
         }
     }
 
 
-//    private void loadArrayFromPaper(){
-//        // Get list of item
-//        List<String> allKeys = Paper.book().getAllKeys();
-//
-//
-//        for (int i = 0; i <allKeys.size() ; i++) {
-//            //Create a State object for each Key.
-//            cur = Paper.book().read(String.valueOf(i+1));
-//            //Add the State object to the ArrayList (in this case we are the ArrayList).
-//        }
-//
-//    }
-
-
-
-
-    public void saveBendSetup(){
+    public void saveBendSetup() {
 
         State state = new State();
         state.setBendRadius(Float.parseFloat(binding.bendRadiusInput.getText().toString().trim()));
@@ -121,13 +101,13 @@ public class BendDataActivity extends AppCompatActivity {
 
     private boolean validateBendRadius() {
         if (binding.bendRadiusInput.getText().toString().trim().isEmpty()) {
-           // inputLayoutLine.setError(getString(R.string.err_msg_line));
+            // inputLayoutLine.setError(getString(R.string.err_msg_line));
             requestFocus(binding.bendRadiusInput);
             validationToast();
             return false;
         }
         //else {
-           // binding.inputLayoutLine.setErrorEnabled(false);
+        // binding.inputLayoutLine.setErrorEnabled(false);
         //}
         return true;
     }
@@ -164,9 +144,9 @@ public class BendDataActivity extends AppCompatActivity {
         }
     }
 
-    private void validationToast(){
+    private void validationToast() {
 
-        Toast.makeText(getApplicationContext(),"Please fill all blank fields",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Please fill all blank fields", Toast.LENGTH_LONG).show();
         //TODO poprawić toast żeby pojawiał się nad przyciskami
     }
 

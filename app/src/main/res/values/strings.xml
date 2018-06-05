@@ -14,6 +14,7 @@
     <string name="degrees">DEGREES</string>
     <string name="finish_CBL">FINISH</string>
     <string name="validationToast">Please fill all text fields</string>
+    <string name="button_calculate">Calculate</string>
 
     <string-array name="material_spinner">
         <item>Stainless Steel</item>
