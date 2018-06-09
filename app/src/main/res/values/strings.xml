@@ -1,25 +1,24 @@
 <resources>
     <string name="app_name">BendHelp</string>
-    <string name="bend_radius">Bend Radius</string>
-    <string name="tube_diameter">Tube Diameter</string>
-    <string name="tube_thickness">Tube Thickness</string>
-    <string name="material">Material</string>
-    <string name="button_next">NEXT</string>
-    <string name="button_back">BACK</string>
-    <string name="button_CBL">CREATE BEND LABEL</string>
-    <string name="button_settings">SETTINGS</string>
-    <string name="button_archive_setup">BEND SETUPS</string>
-    <string name="button_archive_label">BEND LABELS</string>
+    <string name="bend_radius">PROMIEŃ GIĘCIA</string>
+    <string name="tube_diameter">ŚREDNICA RURY</string>
+    <string name="tube_thickness">GRUBOŚĆ RURY</string>
+    <string name="material">MATERIAŁ</string>
+    <string name="button_next">DALEJ</string>
+    <string name="button_back">COFNIJ</string>
+    <string name="button_CBL">STWÓRZ TABELE GIĘCIA</string>
+    <string name="button_settings">USTAWIENIA</string>
+    <string name="button_archive_setup">PARAMETRY GIĘCIA</string>
+    <string name="button_archive_label">TABELE GIĘCIA</string>
     <string name="mm">MM</string>
-    <string name="degrees">DEGREES</string>
-    <string name="finish_CBL">FINISH</string>
-    <string name="validationToast">Please fill all text fields</string>
-    <string name="button_calculate">Calculate</string>
+    <string name="degrees"></string>
+    <string name="validationToast">PROSZĘ WYPEŁNIĆ WSZYSTKIE POLA</string>
+    <string name="button_calculate">PRZELICZ</string>
 
     <string-array name="material_spinner">
-        <item>Stainless Steel</item>
-        <item>Aluminium</item>
-        <item>Black Steel</item>
+        <item>STAL NIERDZEWNA</item>
+        <item>ALUMINIUM</item>
+        <item>CZARNA STAL</item>
     </string-array>
 
 </resources>

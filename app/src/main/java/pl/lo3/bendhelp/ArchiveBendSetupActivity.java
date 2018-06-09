@@ -45,6 +45,7 @@ public class ArchiveBendSetupActivity extends AppCompatActivity {
     public void openMenu(View view) {
 
         finish();
+
     }
 
 }

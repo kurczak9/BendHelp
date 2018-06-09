@@ -51,7 +51,7 @@ public class BendLabelActivity extends AppCompatActivity {
         finish();
     }
 
-    public void saveCBL() {
+    public void saveBL() {
 
         State state = new State();
         state.setX1(Float.parseFloat(binding.x1.getText().toString().trim()));
@@ -104,11 +104,11 @@ public class BendLabelActivity extends AppCompatActivity {
 
         if (submitForm()) {
 
-            saveCBL();
+            saveBL();
             finish();
-            Intent openCBL = new Intent(this, FinishActivity.class);
+            Intent openBL = new Intent(this, FinishActivity.class);
 
-            startActivity(openCBL);
+            startActivity(openBL);
         }
     }
 

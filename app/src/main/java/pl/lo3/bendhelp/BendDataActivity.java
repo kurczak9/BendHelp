@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import io.paperdb.Paper;
@@ -16,6 +18,8 @@ public class BendDataActivity extends AppCompatActivity {
 
     ActivityBendDataBinding binding;
     private ArrayAdapter adaptermaterial;
+    PaperAdapter mAdapter;
+    ListView mList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,18 @@ public class BendDataActivity extends AppCompatActivity {
             }
 
         }
+
+
+//        mAdapter = new PaperAdapter(this, -1, "zapis");
+//
+//
+//        mList.setAdapter(mAdapter);
+//        Intent intent = new Intent(getApplicationContext(), BendDataActivity.class);
+//
+//        intent.putExtra("radius", "" + mAdapter.getItem().getBendRadius());
+//        intent.putExtra("diameter", "" + mAdapter.getItem(pos).getTubeDiameter());
+//        intent.putExtra("thickness", "" + mAdapter.getItem(pos).getTubeThickness());
+//        intent.putExtra("material", "" + mAdapter.getItem(pos).getMaterial());
 
 
     }
