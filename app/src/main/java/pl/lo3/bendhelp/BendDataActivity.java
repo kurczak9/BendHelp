@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -71,7 +70,7 @@ public class BendDataActivity extends AppCompatActivity {
         finish();
     }
 
-    public void openCreateBendLabel(View view) {
+    public void openBendLabel(View view) {
 
         if (submitForm()) {
 

@@ -5,6 +5,8 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import io.paperdb.Paper;
 import pl.lo3.bendhelp.databinding.ActivityFinishBinding;
 
 
@@ -24,7 +26,8 @@ public class FinishActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_finish);
 
         //3,14159265
-
+        State BlendData =Paper.book().read("zapis");
+        State BlendLabel =Paper.book().read("zapis2");
         float L1;
         float L2;
         float L3;

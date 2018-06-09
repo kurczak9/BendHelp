@@ -198,7 +198,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        android:onClick="openCreateBendLabel"
+        android:onClick="openBendLabel"
         android:text="@string/button_next"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         app:layout_constraintBottom_toBottomOf="parent"
