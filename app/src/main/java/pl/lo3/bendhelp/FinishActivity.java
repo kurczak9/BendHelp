@@ -14,7 +14,7 @@ public class FinishActivity extends AppCompatActivity {
 
     ActivityFinishBinding binding;
 
-
+    double stalaKurczaka = 0.0174532925;
 
     //TODO zapisywać liste kątów i odległośći dla ulatwienia procesu liczenia wyniku
 
@@ -25,32 +25,18 @@ public class FinishActivity extends AppCompatActivity {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_finish);
 
-        //3,14159265
-        State BlendData =Paper.book().read("zapis");
-        State BlendLabel =Paper.book().read("zapis2");
+        State BendData = Paper.book().read("zapis");
+        State BendLabel = Paper.book().read("zapis2");
+
         float L1;
         float L2;
         float L3;
         float L4;
 
-        State state = new State();
-        float radius = state.getBendRadius();
-        float angle1 = state.getA1();
-        float angle2 = state.getA2();
-        float angle3 = state.getA3();
-        float angle4 = state.getA4();
-
-        float first = (float) ((radius*angle1*6.2831853)/360);
-        float second = (float) ((radius*angle2*6.2831853)/360);
-        float third = (float) ((radius*angle3*6.2831853)/360);
-        float fourth = (float) ((radius*angle4*6.2831853)/360);
-
-        L1 = first + state.getX1();
-        L2 = second + state.getX2();
-        L3 = third + state.getX3();
-        L4 = fourth + state.getX4();
-
-
+        L1 = (float) ((BendData.getBendRadius()*BendLabel.getA1()*stalaKurczaka)+BendLabel.getX1());
+        L2 = (float) ((BendData.getBendRadius()*BendLabel.getA2()*stalaKurczaka)+BendLabel.getX2());
+        L3 = (float) ((BendData.getBendRadius()*BendLabel.getA3()*stalaKurczaka)+BendLabel.getX3());
+        L4 = (float) ((BendData.getBendRadius()*BendLabel.getA4()*stalaKurczaka)+BendLabel.getX4());
 
         binding.firstDistance.setText(Float.toString(L1));
         binding.secondDistance.setText(Float.toString(L2));
