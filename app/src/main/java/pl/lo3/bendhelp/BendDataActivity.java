@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
@@ -161,8 +162,11 @@ public class BendDataActivity extends AppCompatActivity {
 
     private void validationToast() {
 
-        Toast.makeText(getApplicationContext(), "Please fill all blank fields", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Proszę wypełnić wszystkie puste pola.", Toast.LENGTH_SHORT).show();
+
+
         //TODO poprawić toast żeby pojawiał się nad przyciskami
+        //TODO zmienić jakoś tekst w toasćie na string żeby można było robic łatwo tłumaczenie
     }
 
 }

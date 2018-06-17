@@ -14,11 +14,12 @@
     <string name="degrees"></string>
     <string name="validationToast">PROSZĘ WYPEŁNIĆ WSZYSTKIE POLA</string>
     <string name="button_calculate">PRZELICZ</string>
+    <string name="validateBendDataToast">Proszę wypełnić wszystkie puste pola.</string>
 
     <string-array name="material_spinner">
-        <item>STAL NIERDZEWNA</item>
-        <item>ALUMINIUM</item>
         <item>CZARNA STAL</item>
+        <item>ALUMINIUM</item>
+        <item>STAL NIERDZEWNA</item>
     </string-array>
 
 </resources>

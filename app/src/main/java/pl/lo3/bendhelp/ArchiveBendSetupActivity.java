@@ -7,9 +7,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-//TODO dodać do layoutu Archive_bend_setup floating button   jeżeli to robić to trzeba usunać przycisk Cereate MenuActivity
-//TODO zrobić żeby po wybraniu danego zapisu z list view przenosiło nas do layout create_bend_label
-//TODO i zeby aplikacja miała to w pamięci
 
 public class ArchiveBendSetupActivity extends AppCompatActivity {
     PaperAdapter mAdapter;

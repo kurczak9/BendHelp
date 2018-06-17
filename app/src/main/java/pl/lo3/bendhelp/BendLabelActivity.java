@@ -14,6 +14,8 @@ public class BendLabelActivity extends AppCompatActivity {
 
     ActivityBendLabelBinding binding;
 
+    //TODO zrobić validacje pól
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -16,7 +16,7 @@ public class FinishActivity extends AppCompatActivity {
 
     double stalaKurczaka = 0.0174532925;
 
-    //TODO zapisywać liste kątów i odległośći dla ulatwienia procesu liczenia wyniku
+    //TODO poprawić rysunek
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
