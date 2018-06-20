@@ -126,28 +126,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tubeDiameterInput" />
 
-    <EditText
-        android:id="@+id/tubeThicknessInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:ems="10"
-        android:hint="@string/mm"
-        android:inputType="textPersonName|number|numberDecimal"
-        android:maxHeight="45dp"
-        android:maxLength="40"
-        android:maxWidth="125dp"
-        android:minHeight="16dp"
-        android:minWidth="60dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        app:layout_constraintBottom_toTopOf="@+id/material"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tubeThickness"
-        app:layout_constraintVertical_bias="1.0" />
+        <EditText
+            android:id="@+id/tubeThicknessInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/mm"
+            android:inputType="textPersonName|number|numberDecimal"
+            android:maxHeight="45dp"
+            android:maxLength="40"
+            android:maxWidth="125dp"
+            android:minHeight="16dp"
+            android:minWidth="60dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            app:layout_constraintBottom_toTopOf="@+id/material"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tubeThickness"
+            app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/material"
@@ -173,37 +174,37 @@
         app:layout_constraintEnd_toEndOf="@+id/tubeThicknessInput"
         app:layout_constraintStart_toStartOf="@+id/tubeThicknessInput" />
 
-    <Button
-        android:id="@+id/buttonBack"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:onClick="openMenu"
-        android:text="@string/button_back"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="openMenu"
+            android:text="@string/back"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-    <Button
-        android:id="@+id/buttonNext"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:onClick="openBendLabel"
-        android:text="@string/button_next"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:onClick="openBendLabel"
+            android:text="@string/button_next"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
 </layout>

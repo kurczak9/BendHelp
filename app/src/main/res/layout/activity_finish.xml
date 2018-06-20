@@ -12,12 +12,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="32dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/finishbend" />
+        app:srcCompat="@drawable/finish_activity" />
 
     <Button
         android:id="@+id/button2"
@@ -28,7 +27,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="openMenu"
-        android:text="menu"
+        android:text="@string/menu"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,15 +47,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/guideline21"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -64,13 +64,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/guideline21"
         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
     <TextView
@@ -85,8 +86,8 @@
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/guideline21"
         app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
     <TextView
@@ -101,8 +102,8 @@
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/guideline21"
         app:layout_constraintTop_toTopOf="@+id/guideline20" />
 
     <android.support.constraint.Guideline
@@ -117,21 +118,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.16" />
+        app:layout_constraintGuide_percent="0.23" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.39" />
+        app:layout_constraintGuide_percent="0.41" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.63" />
+        app:layout_constraintGuide_percent="0.6" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.53" />
 
     <TextView
         android:id="@+id/textView"
@@ -144,7 +152,7 @@
         android:text="x1"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
-        app:layout_constraintEnd_toStartOf="@+id/firstDistance"
+        app:layout_constraintEnd_toStartOf="@+id/guideline21"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -159,7 +167,7 @@
         android:text="x2"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
-        app:layout_constraintEnd_toStartOf="@+id/secondDistance"
+        app:layout_constraintEnd_toStartOf="@+id/guideline21"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
@@ -174,7 +182,7 @@
         android:text="x3"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
-        app:layout_constraintEnd_toStartOf="@+id/thirdDistance"
+        app:layout_constraintEnd_toStartOf="@+id/guideline21"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
@@ -189,7 +197,7 @@
         android:text="x4"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
-        app:layout_constraintEnd_toStartOf="@+id/fourthDistance"
+        app:layout_constraintEnd_toStartOf="@+id/guideline21"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toTopOf="@+id/guideline20" />
 

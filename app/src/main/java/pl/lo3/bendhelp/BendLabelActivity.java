@@ -53,6 +53,13 @@ public class BendLabelActivity extends AppCompatActivity {
         finish();
     }
 
+    public void openHelp(View view){
+
+        Intent open = new Intent(this, HelpActivity.class);
+
+        startActivity(open);
+    }
+
     public void saveBL() {
 
         State state = new State();

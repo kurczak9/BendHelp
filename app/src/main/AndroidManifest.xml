@@ -21,7 +21,9 @@
         <activity android:name=".ArchiveBendSetupActivity" />
         <activity android:name=".ArchiveBendLabelActivity" />
         <activity android:name=".BendLabelActivity" />
-        <activity android:name=".FinishActivity"></activity>
+        <activity android:name=".FinishActivity" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".AboutMeActivity"></activity>
     </application>
 
 </manifest>

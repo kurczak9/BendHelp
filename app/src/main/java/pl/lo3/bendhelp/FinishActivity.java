@@ -14,7 +14,7 @@ public class FinishActivity extends AppCompatActivity {
 
     ActivityFinishBinding binding;
 
-    double stalaKurczaka = 0.0174532925;
+    double stalaKurczaka = 0.00872664625;
 
     //TODO poprawić rysunek
 
@@ -33,10 +33,12 @@ public class FinishActivity extends AppCompatActivity {
         float L3;
         float L4;
 
-        L1 = (float) ((BendData.getBendRadius()*BendLabel.getA1()*stalaKurczaka)+BendLabel.getX1());
-        L2 = (float) ((BendData.getBendRadius()*BendLabel.getA2()*stalaKurczaka)+BendLabel.getX2());
-        L3 = (float) ((BendData.getBendRadius()*BendLabel.getA3()*stalaKurczaka)+BendLabel.getX3());
-        L4 = (float) ((BendData.getBendRadius()*BendLabel.getA4()*stalaKurczaka)+BendLabel.getX4());
+        float radius = BendData.getBendRadius();
+
+        L1 = (float) (((radius*BendLabel.getA1()*stalaKurczaka)/2)+BendLabel.getX1());
+        L2 = (float) (((radius*BendLabel.getA1()*stalaKurczaka)/2)+((radius*BendLabel.getA2()*stalaKurczaka)/2)+BendLabel.getX2());
+        L3 = (float) (((radius*BendLabel.getA2()*stalaKurczaka)/2)+((radius*BendLabel.getA3()*stalaKurczaka)/2)+BendLabel.getX3());
+        L4 = (float) (((radius*BendLabel.getA3()*stalaKurczaka)/2)+((radius*BendLabel.getA4()*stalaKurczaka)/2)+BendLabel.getX4());
 
         binding.firstDistance.setText(Float.toString(L1));
         binding.secondDistance.setText(Float.toString(L2));
