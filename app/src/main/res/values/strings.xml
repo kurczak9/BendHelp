@@ -19,14 +19,16 @@
     <string name="aboutMe">INFORMACJE O TWÓRCY</string>
     <string name="validateBendDataToast">Proszę wypełnić wszystkie puste pola.</string>
     <string name="information">POMOC</string>
-    <string name="help">Wymagane jest podanie parametrów od x1 do x4 oraz od a1 do a4. Wymiary z oznaczeniem "x" z przodu to odległości pomiędzy środkiem gięcia,
-        natomiast "a" oznaczają kąty jakie chcemy mieć przy poszczególnych gięciach. Jeżeli chcemy tylko jedne gięcie wypełniamy pola x1 i a1,
-        a w pozostałych pozostawiamy zera, jeśli chcemy więcej gięć to uzupełniamy kolejne pola odpowiednio wymiar z "x" i z "a". W wyniku dostaniemy
-        odległości, które powinniśmy zaznaczyć na rurze przed gięciem, następnie odpowiednio z każdym gięciem przesuwać rurę o tyle
-        żeby zaznaczona odległość kolejnego gięcia znajdowała się na linii styczności. Należy pamiętać o tym, że rura jest w swego rodzaju
-        sposób "nakładana" na podane wymiary więc wygięta konstrukcja będzie szersza o promień giętej rury.</string>
-    <string name="aboutMeText">Witam, nazywam się Dominik Jerzy Jurczak i jestem twórcą tej aplikacji. Jestem początkującym
-    developerem więc bardzo potrzebuje feedbacku ze strony użytkowników aplikacji. Prosiłbym o kontakt na mail: dominikjjurczak@gmail.com</string>
+    <string name="help">Wymagane jest podanie parametrów od <font color="#ed1c24">x1</font> do <font color="#ed1c24">x4</font> oraz od <font color="#22b14c">a1</font> do <font color="#22b14c">a4</font>.\n\n
+        Wymiary z oznaczeniem <font color="#ed1c24">"<b>x</b>"</font> z przodu to odległości pomiędzy środkiem gięcia, \n\n
+        Wymiary z oznaczeniem <font color="#22b14c">""<b>a</b>"</font> oznaczają kąty jakie chcemy mieć przy poszczególnych gięciach. \n\n
+        Jeżeli chcemy tylko jedne gięcie wypełniamy pola x1 i a1, w pozostałych pozostawiamy zera. \n
+        W wyniku dostaniemy odległości, które powinniśmy zaznaczyć na rurze przed gięciem, następnie odpowiednio z każdym gięciem przesuwać rurę o tyle
+        żeby zaznaczona odległość kolejnego gięcia znajdowała się na linii styczności. \n
+        Należy pamiętać o tym, że rura jest w swego rodzaju sposób "nakładana" na podane wymiary więc wygięta konstrukcja będzie szersza o promień giętej rury.</string>
+    <string name="aboutMeText">Witam, nazywam się Dominik Jerzy Jurczak i jestem twórcą tej aplikacji. \n\n
+        Jestem początkującym developerem więc bardzo potrzebuje feedbacku ze strony użytkowników aplikacji. \n\n
+        Prosiłbym o kontakt na mail: dominikjjurczak@gmail.com</string>
 
     <string-array name="material_spinner">
         <item>CZARNA STAL</item>

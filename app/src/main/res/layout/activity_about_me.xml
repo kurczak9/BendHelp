@@ -50,6 +50,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:autoLink="email"
                 android:text="@string/aboutMeText"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title.Inverse"
                 app:layout_constraintBottom_toTopOf="@+id/guideline22"

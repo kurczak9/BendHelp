@@ -7,8 +7,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import io.paperdb.Paper;
@@ -98,12 +96,7 @@ public class PaperAdapter extends ArrayAdapter<State> implements Filterable {
                 String a3 = (Float.toString(getItem(pos).getA3()));
                 String a4 = (Float.toString(getItem(pos).getA4()));
 
-                String bendR = (Float.toString(getItem(pos).getBendRadius()));
-                String tubeD = (Float.toString(getItem(pos).getTubeDiameter()));
-                String tubeT = (Float.toString(getItem(pos).getTubeThickness()));
-                String Material = ((getItem(pos).getMaterial()));
-
-                mView.setText(bendR + "/" + tubeD + "x" + tubeT + "/" + Material);
+                mView.setText("x1="+x1 + "/a1=" + a1 + " ... x4=" + x4 + "/a4=" + a4);
 
             }
         }
