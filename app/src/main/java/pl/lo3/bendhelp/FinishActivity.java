@@ -16,7 +16,7 @@ public class FinishActivity extends AppCompatActivity {
 
     double stalaKurczaka = 0.00872664625;
 
-    //TODO poprawić rysunek
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

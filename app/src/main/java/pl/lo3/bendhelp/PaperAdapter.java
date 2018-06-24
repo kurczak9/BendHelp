@@ -77,7 +77,7 @@ public class PaperAdapter extends ArrayAdapter<State> implements Filterable {
 
         if (getItem(pos)!=null) {
             if (nameOfPaper == "zapis") {
-                //TODO cały opis zapisanych parametrów
+
                 String bendR = (Float.toString(getItem(pos).getBendRadius()));
                 String tubeD = (Float.toString(getItem(pos).getTubeDiameter()));
                 String tubeT = (Float.toString(getItem(pos).getTubeThickness()));
@@ -86,6 +86,7 @@ public class PaperAdapter extends ArrayAdapter<State> implements Filterable {
                 mView.setText(bendR + "/" + tubeD + "x" + tubeT + "/" + Material);
             } else {
                 //znaczy jest w zapis2
+                //TODO cały opis zapisanych parametrów
 
                 String x1 = (Float.toString(getItem(pos).getX1()));
                 String x2 = (Float.toString(getItem(pos).getX2()));
